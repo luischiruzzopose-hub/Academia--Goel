@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Simulacro de examen teórico · Academia de Choferes Goel</title>
+  <meta name="description" content="Simulacro gratuito del examen teórico de manejo: 30 preguntas con señales de tránsito, corrección al instante y preguntas nuevas en cada intento.">
+  <meta name="theme-color" content="#D7192A">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="marca" href="index.html" aria-label="Academia de Choferes Goel, volver al inicio">
+        <img src="img/logo.png" alt="" width="58" height="58">
+        <span class="marca-texto">
+          <span class="marca-goel">GOEL</span>
+          <span class="marca-sub">academia de choferes</span>
+        </span>
+      </a>
+      <a class="boton boton-oscuro" href="index.html" style="min-height: 48px; padding: 10px 18px; color: #FFC629">← Inicio</a>
+    </div>
+  </header>
+
+  <section class="sim-cabecera">
+    <div class="contenedor">
+      <span class="etiqueta">Examen teórico</span>
+      <h1 class="titulo">Simulacro <em>de teórico</em></h1>
+      <p>30 preguntas de opción múltiple. Cada vez que lo hacés, 20 preguntas cambian. Respondé todas y tocá «Corregir» para ver tu resultado.</p>
+    </div>
+  </section>
+
+  <main class="sim" id="simulacro">
+    <div class="contenedor">
+      <p id="cargando" class="bajada">Cargando preguntas…</p>
+
+      <div id="resultado" class="resultado" hidden tabindex="-1">
+        <div>
+          <div class="etiqueta" style="background:#14171C">Tu resultado</div>
+          <div class="resultado-numero" id="puntaje"></div>
+          <p class="bajada" id="porcentaje" style="margin:0"></p>
+        </div>
+        <button type="button" class="boton boton-rojo" data-accion="otro">Hacer otro simulacro</button>
+      </div>
+
+      <div class="sim-progreso" id="progreso" hidden>
+        <span>Simulacro</span>
+        <span id="contador">0 de 30</span>
+      </div>
+
+      <div id="preguntas" style="display:flex;flex-direction:column;gap:16px"></div>
+
+      <div class="sim-acciones" id="acciones" hidden>
+        <p id="faltan"></p>
+        <button type="button" class="boton boton-rojo" id="corregir">Corregir</button>
+      </div>
+      <div class="sim-acciones" id="acciones-final" hidden>
+        <a class="boton boton-borde" href="index.html#manual">Repasar el manual</a>
+        <button type="button" class="boton boton-rojo" data-accion="otro">Hacer otro simulacro</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="linea-ruta" aria-hidden="true"></div>
+    <div class="contenedor">
+      <div class="pie-marca">
+        <img src="img/logo.png" alt="" width="44" height="44" loading="lazy">
+        <span><strong>GOEL</strong> · Academia de choferes · Montevideo</span>
+      </div>
+      <div class="pie-datos">
+        <a href="https://wa.me/59892530639">WhatsApp 092 530 639</a>
+        <a href="https://www.instagram.com/academiagoel/" target="_blank" rel="noopener">@academiagoel</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/simulacro.js"></script>
+</body>
+</html>
