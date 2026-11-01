@@ -280,6 +280,21 @@ a:hover { color: #7E0A1A; }
 .galeria img:nth-child(odd) { transform: rotate(-1.5deg); }
 .galeria img:nth-child(even) { transform: rotate(1.5deg); }
 @media (min-width: 760px) { .galeria { grid-template-columns: repeat(4, 1fr); gap: 28px 24px; } .galeria img { border-width: 8px; } }
+.mas-aprobados {
+  margin-top: 40px;
+  padding: 24px 20px;
+  border: 2px dashed var(--amarillo);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  text-align: center;
+}
+.mas-aprobados p { margin: 0; font-family: var(--destacado); font-style: italic; font-size: 24px; line-height: 1.3; color: var(--blanco); }
+@media (min-width: 760px) {
+  .mas-aprobados { flex-direction: row; align-items: center; justify-content: space-between; text-align: left; padding: 28px 32px; }
+}
 
 /* ---------- Autos ---------- */
 .autos { display: grid; gap: 28px; }
